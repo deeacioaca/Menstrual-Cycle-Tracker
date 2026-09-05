@@ -125,10 +125,6 @@ public class TodayFragment extends Fragment {
         weight(R.id.bandFollicular, follicular);
         weight(R.id.bandFertile, fertile);
         weight(R.id.bandLuteal, luteal);
-        weight(R.id.labelPeriod, period);
-        weight(R.id.labelFollicular, follicular);
-        weight(R.id.labelFertile, fertile);
-        weight(R.id.labelLuteal, luteal);
 
         // Mark the phase you are actually in, rather than assuming it is the last band.
         Phase now = insights.phaseOn(day);

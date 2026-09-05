@@ -141,10 +141,10 @@
                 android:layout_marginTop="9dp"
                 android:orientation="horizontal">
 
-                <TextView android:id="@+id/labelPeriod" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5" android:textSize="10.5sp" android:text="@string/phase_menstrual" />
-                <TextView android:id="@+id/labelFollicular" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="7" android:textSize="10.5sp" android:text="@string/phase_follicular" />
-                <TextView android:id="@+id/labelFertile" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5" android:textSize="10.5sp" android:text="@string/phase_fertile" />
-                <TextView android:id="@+id/labelLuteal" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="11" android:textSize="10.5sp" android:text="@string/phase_luteal" />
+                <TextView android:id="@+id/labelPeriod" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="viewStart" android:textSize="10sp" android:text="@string/phase_menstrual" />
+                <TextView android:id="@+id/labelFollicular" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textSize="10sp" android:text="@string/phase_follicular" />
+                <TextView android:id="@+id/labelFertile" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textSize="10sp" android:text="@string/phase_fertile" />
+                <TextView android:id="@+id/labelLuteal" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="viewEnd" android:textSize="10sp" android:text="@string/phase_luteal" />
             </LinearLayout>
         </LinearLayout>
 
