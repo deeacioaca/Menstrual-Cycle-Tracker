@@ -1,85 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Start">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="32dp"
+    android:paddingTop="72dp"
+    android:paddingEnd="32dp"
+    android:paddingBottom="40dp"
+    tools:context=".ui.StartActivity">
 
-  <ImageView
-      android:id="@+id/imageView3"
-      android:layout_width="84dp"
-      android:layout_height="76dp"
-      android:contentDescription="@string/logo"
-      android:src="@drawable/clue"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView4"
-      app:layout_constraintVertical_bias="0.03"
-      tools:ignore="ImageContrastCheck"
-      tools:srcCompat="@tools:sample/avatars" />
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/arc_logo" />
 
-  <Button
-      android:id="@+id/login_button"
-      android:layout_width="360dp"
-      android:layout_height="55dp"
-      android:backgroundTint="@color/white"
-      android:text="@string/acc"
-      android:textColor="#5199BA"
-      app:cornerRadius="20dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.49"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/register_button"
-      app:layout_constraintVertical_bias="0.179"
-      tools:ignore="TextContrastCheck"
-      android:background="#00000000"/>
+    <TextView
+        style="@style/Arc.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/welcome_to_arc"
+        android:textSize="32sp" />
 
-  <Button
-      android:id="@+id/register_button"
-      android:layout_width="360dp"
-      android:layout_height="55dp"
-      android:backgroundTint="#5199BA"
-      android:text="@string/start"
-      app:cornerRadius="20dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.49"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.853"
-      tools:ignore="TextContrastCheck" />
+    <TextView
+        style="@style/Arc.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_tagline"
+        android:textSize="13sp" />
 
-  <TextView
-      android:id="@+id/textView4"
-      android:layout_width="200dp"
-      android:layout_height="40dp"
-      android:text="@string/welcome_to_clue"
-      android:textColor="@color/black"
-      android:textSize="24sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.137" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/startimg"
+        android:src="@drawable/start_image" />
 
-  <ImageView
-      android:id="@+id/imageView4"
-      android:layout_width="253dp"
-      android:layout_height="223dp"
-      android:layout_marginTop="16dp"
-      android:contentDescription="@string/startimg"
-      android:src="@drawable/start_image"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView3"
-      app:layout_constraintVertical_bias="0.0"
-      tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/register_button"
+        style="@style/Arc.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/start" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/hanken_medium"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/acc"
+        android:textColor="@color/arc_deep"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Four figures standing together in Arc's palette.
+  Per figure: body → neck → hair → head. The hair is drawn as a shape that
+  overhangs the top of the head and falls below it, so the face reads as open
+  rather than the head reading as helmeted.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="300dp"
+    android:viewportWidth="320"
+    android:viewportHeight="300">
+
+    <path
+        android:fillColor="#E9E4F7"
+        android:pathData="M160,40 a102,102 0 1,0 0,204 a102,102 0 1,0 0,-204 Z" />
+
+    <path
+        android:pathData="M160,30 a112,112 0 1,0 0,224 a112,112 0 1,0 0,-224 Z"
+        android:strokeAlpha="0.4"
+        android:strokeColor="#B9A8E8"
+        android:strokeWidth="1.5" />
+
+    <path
+        android:fillAlpha="0.7"
+        android:fillColor="#DCCDB9"
+        android:pathData="M274,44 a18,18 0 1,0 0,36 a18,18 0 1,0 0,-36 Z" />
+
+    <path
+        android:fillAlpha="0.5"
+        android:fillColor="#D3C9EF"
+        android:pathData="M44,252 a116,7 0 1,0 232,0 a116,7 0 1,0 -232,0 Z" />
+
+    <!-- figure 1 — light, hair to the shoulder -->
+    <path android:fillColor="#B9A8E8" android:pathData="M49,250 L55,152 Q55,138 66.4,133 Q74,130 81.6,133 Q93,138 93,152 L99,250 Z" />
+    <path android:fillColor="#B9A8E8" android:pathData="M69,134 L79,134 L79,142 L69,142 Z" />
+    <path android:fillColor="#9C86D8" android:pathData="M64,150 Q59,150 59,145 L59,126 A15,15 0 0,1 89,126 L89,145 Q89,150 84,150 Z" />
+    <path android:fillColor="#B9A8E8" android:pathData="M74,114 a12,12 0 1,0 0,24 a12,12 0 1,0 0,-24 Z" />
+
+    <!-- figure 2 — deep, hair up -->
+    <path android:fillColor="#6B54A8" android:pathData="M107,250 L107,132 Q107,118 119.6,113 Q128,110 136.4,113 Q149,118 149,132 L149,250 Z" />
+    <path android:fillColor="#6B54A8" android:pathData="M123,113 L133,113 L133,122 L123,122 Z" />
+    <path android:fillColor="#52407F" android:pathData="M128,76 a8,8 0 1,0 0,16 a8,8 0 1,0 0,-16 Z" />
+    <path android:fillColor="#52407F" android:pathData="M112,104 A16,16 0 0,1 144,104 Z" />
+    <path android:fillColor="#6B54A8" android:pathData="M128,91 a13,13 0 1,0 0,26 a13,13 0 1,0 0,-26 Z" />
+
+    <!-- figure 3 — accent, hair to the shoulder -->
+    <path android:fillColor="#8B72CF" android:pathData="M156,250 L164,142 Q164,128 176,123 Q184,120 192,123 Q204,128 204,142 L212,250 Z" />
+    <path android:fillColor="#8B72CF" android:pathData="M179,122 L189,122 L189,132 L179,132 Z" />
+    <path android:fillColor="#6E56B4" android:pathData="M174,140 Q169,140 169,135 L169,114 A15,15 0 0,1 199,114 L199,135 Q199,140 194,140 Z" />
+    <path android:fillColor="#8B72CF" android:pathData="M184,102 a12,12 0 1,0 0,24 a12,12 0 1,0 0,-24 Z" />
+
+    <!-- figure 4 — sand, cropped -->
+    <path android:fillColor="#DCCDB9" android:pathData="M220,250 L223,158 Q223,144 233.2,139 Q240,136 246.8,139 Q257,144 257,158 L260,250 Z" />
+    <path android:fillColor="#DCCDB9" android:pathData="M235,137 L245,137 L245,148 L235,148 Z" />
+    <path android:fillColor="#C0AB8E" android:pathData="M231,146 Q226,146 226,141 L226,130 A14,14 0 0,1 254,130 L254,141 Q254,146 249,146 Z" />
+    <path android:fillColor="#DCCDB9" android:pathData="M240,119 a11,11 0 1,0 0,22 a11,11 0 1,0 0,-22 Z" />
+</vector>

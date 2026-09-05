@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tabbar"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="18dp">
+
+        <LinearLayout
+            android:id="@+id/tab_today"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/tab_icon_today"
+                android:tag="icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/hanken_regular"
+                android:letterSpacing="0.03"
+                android:tag="label"
+                android:text="@string/tab_today"
+                android:textColor="@color/arc_tab_idle"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/tab_icon_calendar"
+                android:tag="icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/hanken_regular"
+                android:letterSpacing="0.03"
+                android:tag="label"
+                android:text="@string/tab_calendar"
+                android:textColor="@color/arc_tab_idle"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/tab_icon_log"
+                android:tag="icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/hanken_regular"
+                android:letterSpacing="0.03"
+                android:tag="label"
+                android:text="@string/tab_log"
+                android:textColor="@color/arc_tab_idle"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_insights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="10dp"
+                android:background="@drawable/tab_icon_insights"
+                android:tag="icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/hanken_regular"
+                android:letterSpacing="0.03"
+                android:tag="label"
+                android:text="@string/tab_insights"
+                android:textColor="@color/arc_tab_idle"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,22 +1,115 @@
 <resources>
-    <string name="app_name">Tema_1_Andreea_Cioaca_1081</string>
-    <string name="btnContinue">CONTINUE</string>
+    <string name="app_name">Arc</string>
+    <string name="app_tagline">Your menstrual cycle tracker</string>
+    <string name="logo">Arc logo</string>
+
+    <!-- Start / Register / Login -->
+    <string name="welcome_to_arc">Welcome to Arc</string>
+    <string name="start">Get started</string>
+    <string name="acc">I have an account</string>
+    <string name="startimg">Illustration of four people standing together</string>
+    <string name="back"><![CDATA[< Back]]></string>
     <string name="btnCont">Continue</string>
     <string name="forgot_password">Forgot password</string>
-    <string name="logo">Logo</string>
-    <string name="password">Password</string>
-    <string name="email">Email</string>
-    <string name="pswd">Create a password</string>
-    <string name="acc">I HAVE AN ACCOUNT</string>
-    <string name="start">GET STARTED</string>
-    <string name="welcome_to_clue">Welcome to Clue!</string>
-    <string name="startimg">start_image</string>
-    <string name="first_name">Your first name</string>
-    <string name="back"><![CDATA[< Back]]></string>
-    <string name="first_name_indent">"     Your first name"</string>
-    <string name="email_indent">"     Email"</string>
-    <string name="password_indent">"     Create a password"</string>
-    <string name="pswd_indent">"     Password"</string>
-    <string name="terms">I agree to the <b><u>Terms of Service</u></b></string>
-    <string name="privacy">I agree to the <b><u>Privacy Policy</u></b></string>
+    <string name="first_name_indent">Your first name</string>
+    <string name="email_indent">Email</string>
+    <string name="password_indent">Create a password</string>
+    <string name="pswd_indent">Password</string>
+    <string name="terms">I agree to the Terms of Service</string>
+    <string name="privacy">I agree to the Privacy Policy</string>
+
+    <!-- Today -->
+    <string name="today_greeting">Good morning</string>
+    <string name="today_cycle_day">Cycle day</string>
+    <string name="today_phase">%1$s phase</string>
+    <string name="today_period_in">Period in %1$d days</string>
+    <string name="today_period_tomorrow">Period expected tomorrow</string>
+    <string name="today_period_today">Period expected today</string>
+    <string name="today_period_late">Period %1$d days late</string>
+    <string name="today_expect">What to expect</string>
+    <string name="today_next_period">Next period</string>
+    <string name="today_cycle_length">Cycle length</string>
+    <string name="today_days">%1$d days</string>
+    <string name="today_regular">Very regular</string>
+    <string name="today_few_cycles">Still learning</string>
+    <string name="today_estimate_tight">±1 day</string>
+    <string name="today_estimate_rough">Rough estimate</string>
+    <string name="today_awaiting">Log a period first</string>
+    <string name="today_default_estimate">Typical average</string>
+    
+    <string name="today_no_data_phase">Nothing logged yet</string>
+    <string name="today_no_data_pill">Log your period to begin</string>
+    <string name="today_no_data_body">Arc learns from what you log. Mark the first day of your period and the ring will start filling.</string>
+
+    <string name="phase_menstrual">Menstrual</string>
+    <string name="phase_follicular">Follicular</string>
+    <string name="phase_fertile">Fertile</string>
+    <string name="phase_luteal">Luteal</string>
+
+    <string name="expect_menstrual">Bleeding days. Rest where you can — energy usually returns once the flow eases.</string>
+    <string name="expect_follicular">Energy tends to climb through this stretch. A good week for anything demanding.</string>
+    <string name="expect_fertile">Your fertile window, estimated from your last cycles.</string>
+    <string name="expect_luteal">Energy often dips in the days before bleeding. Nothing to fix — just worth knowing.</string>
+
+    <!-- Calendar -->
+    <string name="calendar_previous">‹</string>
+    <string name="calendar_next">›</string>
+    <string name="calendar_log_this_day">Log this day</string>
+    <string name="legend_period">Period</string>
+    <string name="legend_predicted">Predicted</string>
+    <string name="legend_fertile">Fertile</string>
+    <string name="calendar_note_period">Bleeding logged for this day.</string>
+    <string name="calendar_note_predicted">Period predicted, based on your last cycles.</string>
+    <string name="calendar_note_ovulation">Estimated ovulation.</string>
+    <string name="calendar_note_fertile">Fertile window, based on your last cycles.</string>
+    <string name="calendar_note_logged">You logged something on this day.</string>
+    <string name="calendar_note_empty">No entries for this day.</string>
+    <string name="weekday_mon">M</string>
+    <string name="weekday_tue">T</string>
+    <string name="weekday_wed">W</string>
+    <string name="weekday_thu">T</string>
+    <string name="weekday_fri">F</string>
+    <string name="weekday_sat">S</string>
+    <string name="weekday_sun">S</string>
+
+    <!-- Log -->
+    <string name="log_title_today">Log today</string>
+    <string name="log_title_other">Log day</string>
+    <string name="log_flow">Flow</string>
+    <string name="log_mood">Mood</string>
+    <string name="log_symptoms">Symptoms</string>
+    <string name="log_autosave">Saved as you tap</string>
+    <string name="day_flow_none">None</string>
+    <string name="day_flow_light">Light</string>
+    <string name="day_flow_medium">Medium</string>
+    <string name="day_flow_heavy">Heavy</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Insights</string>
+    <string name="insights_chart_label">Cycle length, last 6</string>
+    <string name="insights_avg_period">Avg period</string>
+    <string name="insights_variation">Variation</string>
+    <string name="insights_plus_minus">±%1$d days</string>
+    <string name="insights_pattern_label">Pattern noticed</string>
+    <string name="insights_empty">Once you have logged two periods, Arc can show how your cycles compare.</string>
+    <string name="insights_summary_regular">Your cycles have stayed within two days of each other. Predictions are confident.</string>
+    <string name="insights_summary_variable">Your cycles vary by about %1$d days either side, so predictions are a wider guess.</string>
+    <string name="insights_pattern_confident">Cycle lengths this steady mean the predicted dates should land close. Arc will keep adjusting as you log.</string>
+    <string name="insights_pattern_spread">There is a fair spread in your cycle lengths. Treat the predicted date as a window rather than a fixed day.</string>
+    <string name="insights_pattern_none">Log a couple of cycles and patterns will start showing up here.</string>
+
+    <!-- Tabs -->
+    <string name="tab_today">Today</string>
+    <string name="tab_calendar">Calendar</string>
+    <string name="tab_log">Log</string>
+    <string name="tab_insights">Insights</string>
+
+    <!-- Validation -->
+    <string name="error_name_required">Completati numele!</string>
+    <string name="error_email_required">Completati adresa de email!</string>
+    <string name="error_email_invalid">Email invalid!</string>
+    <string name="error_password_required">Completati parola!</string>
+    <string name="error_password_too_short">Parola trebuie sa contina minim 5 caractere!</string>
+    <string name="error_terms_required">Trebuie sa acceptati termenii si conditiile!</string>
+    <string name="error_privacy_required">Trebuie sa acceptati politica de confidentialitate!</string>
 </resources>

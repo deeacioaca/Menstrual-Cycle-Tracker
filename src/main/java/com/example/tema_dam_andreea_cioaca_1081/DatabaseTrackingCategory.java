@@ -1,9 +1,0 @@
-package com.example.tema_dam_andreea_cioaca_1081;
-
-import androidx.room.Database;
-import androidx.room.RoomDatabase;
-
-@Database(entities = {TrackingCategory.class}, version = 1, exportSchema = false)
-public abstract class DatabaseTrackingCategory extends RoomDatabase {
-    public abstract TrackingCategoryDAO trackingCategoryDAO();
-}

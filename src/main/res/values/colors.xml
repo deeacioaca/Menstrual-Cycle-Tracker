@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <!--
+      Arc palette, taken directly from the design canvas swatch row:
+      deep indigo ink, two purples off the logo, warmed by a sand tone.
+    -->
+    <color name="arc_ink">#2E2A40</color>       <!-- headings, today tick, primary button -->
+    <color name="arc_deep">#6B54A8</color>      <!-- period, active chip text, tab active -->
+    <color name="arc_accent">#8B72CF</color>    <!-- ring arc, accents -->
+    <color name="arc_light">#B9A8E8</color>     <!-- fertile band -->
+    <color name="arc_sand">#EDE3D8</color>      <!-- fertile / warm surface -->
+    <color name="arc_paper">#F6F4FA</color>     <!-- screen top, on-ink text -->
+
+    <!-- Screen + surfaces -->
+    <color name="arc_bg_top">#F6F4FA</color>
+    <color name="arc_bg_mid">#F1EEF7</color>
+    <color name="arc_bg_bottom">#EFECF6</color>
+    <color name="arc_card">#FFFFFF</color>
+    <color name="arc_card_soft">#FAF9FC</color>
+    <color name="arc_sheet">#FBFAFD</color>
+    <color name="arc_tint">#F4F1FA</color>
+
+    <!-- Text -->
+    <color name="arc_text">#3C3652</color>
+    <color name="arc_secondary">#5A5370</color>
+    <color name="arc_muted">#6E6880</color>
+    <color name="arc_label">#9A93AD</color>
+    <color name="arc_faint">#B0AABF</color>
+    <color name="arc_tab_idle">#A9A3B8</color>
+    <color name="arc_tab_icon_idle">#B7B1C6</color>
+
+    <!-- Calendar + chips -->
+    <color name="arc_predicted">#D8CEF0</color>
+    <color name="arc_predicted_cell">#EDE8F7</color>
+    <color name="arc_fertile_cell">#F5EEE6</color>
+    <color name="arc_chip_on">#E7E0F5</color>
+    <color name="arc_chip_off">#F7F5FC</color>
+    <color name="arc_border">#EBE6F5</color>
+    <color name="arc_border_strong">#CFC3EA</color>
+
+    <!-- Ring ticks -->
+    <color name="arc_tick_future">#DEDAE8</color>
+    <color name="arc_tick_past">#BDB4D6</color>
+    <color name="arc_tick_fertile">#DCCDB9</color>
+    <color name="arc_tick_idle">#D6D1E2</color>
+
+    <color name="arc_sand_label">#8A7B67</color>
+    <color name="arc_sand_text">#463D2F</color>
+
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="arc_icon_background">#E3DCF2</color>
 </resources>

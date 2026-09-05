@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/monthLabel" style="@style/Arc.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:text="September" />
+                <TextView android:id="@+id/yearLabel" style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:letterSpacing="0.14" android:textSize="12sp" tools:text="2026" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/previousMonth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/hanken_regular"
+                android:gravity="center"
+                android:text="@string/calendar_previous"
+                android:textColor="@color/arc_deep"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/nextMonth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/hanken_regular"
+                android:gravity="center"
+                android:text="@string/calendar_next"
+                android:textColor="@color/arc_deep"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_sun" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_mon" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_tue" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_wed" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_thu" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_fri" />
+            <TextView style="@style/WeekdayHeader" android:text="@string/weekday_sat" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/monthGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:columnCount="7" />
+
+        <com.example.arc.ui.widget.FlowLayout
+            android:id="@+id/legend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp">
+
+            <LinearLayout style="@style/LegendItem">
+                <View style="@style/LegendSwatch" android:background="@drawable/dot_period" />
+                <TextView style="@style/LegendLabel" android:text="@string/legend_period" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LegendItem">
+                <View style="@style/LegendSwatch" android:background="@drawable/dot_predicted" />
+                <TextView style="@style/LegendLabel" android:text="@string/legend_predicted" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LegendItem">
+                <View style="@style/LegendSwatch" android:background="@drawable/dot_fertile" />
+                <TextView style="@style/LegendLabel" android:text="@string/legend_fertile" />
+            </LinearLayout>
+        </com.example.arc.ui.widget.FlowLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView android:id="@+id/selectedLabel" style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:text="5 SEPTEMBER" />
+
+            <TextView
+                android:id="@+id/selectedNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/newsreader_light"
+                android:lineSpacingMultiplier="1.35"
+                android:textColor="@color/arc_ink"
+                android:textSize="19sp"
+                tools:text="Luteal phase, nothing logged yet." />
+
+            <TextView
+                android:id="@+id/logThisDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_tint"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/hanken_medium"
+                android:gravity="center"
+                android:padding="13dp"
+                android:text="@string/calendar_log_this_day"
+                android:textColor="@color/arc_deep"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,125 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    android:scrollbars="none"
+    tools:context=".ui.RegisterActivity">
 
-  <Button
-      android:id="@+id/back_register"
-      android:layout_width="88dp"
-      android:layout_height="38dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="321dp"
-      android:layout_marginBottom="13dp"
-      android:backgroundTint="@color/white"
-      android:text="@string/back"
-      android:textColor="#5199BA"
-      app:cornerRadius="20dp"
-      app:layout_constraintBottom_toTopOf="@+id/etName"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="TextContrastCheck,TouchTargetSizeCheck"
-      android:background="#00000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="28dp"
+        android:paddingBottom="32dp">
 
-  <Button
-      android:id="@+id/btnContinue"
-      android:layout_width="360dp"
-      android:layout_height="55dp"
-      android:backgroundTint="#5199BA"
-      android:text="@string/btnCont"
-      app:cornerRadius="20dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etName"
-      app:layout_constraintVertical_bias="0.355"
-      tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/back_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/hanken_medium"
+            android:padding="8dp"
+            android:text="@string/back"
+            android:textColor="@color/arc_deep"
+            android:textSize="14sp" />
 
-  <EditText
-      android:id="@+id/etEmail"
-      android:layout_width="360dp"
-      android:layout_height="35dp"
-      android:background="#E6E6E6"
-      android:backgroundTint="#E6E6E6"
-      android:ems="10"
-      android:hint="@string/email_indent"
-      android:importantForAutofill="no"
-      android:inputType="textEmailAddress"
-      app:layout_constraintBottom_toTopOf="@+id/etPassword"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.49"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etName"
-      app:layout_constraintVertical_bias="0.555"
-      tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView
+            style="@style/Arc.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/start" />
 
-  <EditText
-      android:id="@+id/etPassword"
-      android:layout_width="360dp"
-      android:layout_height="35dp"
-      android:background="#E6E6E6"
-      android:backgroundTint="#E6E6E6"
-      android:ems="10"
-      android:hint="@string/password_indent"
-      android:importantForAutofill="no"
-      android:inputType="textPassword"
-      android:labelFor="@id/etPasswordLogin"
-      app:layout_constraintBottom_toTopOf="@+id/switchTermsOfService"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etName"
-      app:layout_constraintVertical_bias="0.736"
-      app:passwordToggleEnabled="true"
-      tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="@string/first_name_indent" />
+        <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:autofillHints="name" android:background="@drawable/bg_field" android:fontFamily="@font/hanken_regular" android:inputType="textPersonName" android:padding="16dp" android:textColor="@color/arc_ink" android:textSize="15sp" />
 
-  <EditText
-      android:id="@+id/etName"
-      android:layout_width="360dp"
-      android:layout_height="35dp"
-      android:background="#E6E6E6"
-      android:backgroundTint="#E6E6E6"
-      android:ems="10"
-      android:hint="@string/first_name_indent"
-      android:inputType="textPersonName"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.096"
-      tools:ignore="TouchTargetSizeCheck" />
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/email_indent" />
+        <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:autofillHints="emailAddress" android:background="@drawable/bg_field" android:fontFamily="@font/hanken_regular" android:inputType="textEmailAddress" android:padding="16dp" android:textColor="@color/arc_ink" android:textSize="15sp" />
 
-  <Switch
-      android:id="@+id/switchTermsOfService"
-      android:layout_width="360dp"
-      android:layout_height="35dp"
-      android:text="@string/terms"
-      app:layout_constraintBottom_toTopOf="@+id/switchPrivacyPolicy"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etName"
-      app:layout_constraintVertical_bias="0.936"
-      tools:ignore="TouchTargetSizeCheck" />
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/password_indent" />
+        <EditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:autofillHints="password" android:background="@drawable/bg_field" android:fontFamily="@font/hanken_regular" android:inputType="textPassword" android:padding="16dp" android:textColor="@color/arc_ink" android:textSize="15sp" />
 
-  <Switch
-      android:id="@+id/switchPrivacyPolicy"
-      android:layout_width="360dp"
-      android:layout_height="35dp"
-      android:text="@string/privacy"
-      app:layout_constraintBottom_toTopOf="@+id/btnContinue"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.509"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/etName"
-      app:layout_constraintVertical_bias="0.952"
-      tools:ignore="TouchTargetSizeCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/hanken_regular" android:text="@string/terms" android:textColor="@color/arc_text" android:textSize="13.5sp" />
+                <Switch android:id="@+id/switchTermsOfService" android:layout_width="wrap_content" android:layout_height="wrap_content" android:theme="@style/ArcSwitch" tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/hanken_regular" android:text="@string/privacy" android:textColor="@color/arc_text" android:textSize="13.5sp" />
+                <Switch android:id="@+id/switchPrivacyPolicy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:theme="@style/ArcSwitch" tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnContinue"
+            style="@style/Arc.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btnCont" />
+    </LinearLayout>
+</ScrollView>

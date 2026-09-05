@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="30dp">
+
+        <TextView android:id="@+id/logTitle" style="@style/Arc.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:text="Log today" />
+        <TextView android:id="@+id/logSubtitle" style="@style/Arc.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textSize="12.5sp" tools:text="Saturday, 5 September" />
+
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="@string/log_flow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/flowNone" style="@style/FlowOption" android:text="@string/day_flow_none" />
+            <TextView android:id="@+id/flowLight" style="@style/FlowOption" android:text="@string/day_flow_light" />
+            <TextView android:id="@+id/flowMedium" style="@style/FlowOption" android:text="@string/day_flow_medium" />
+            <TextView android:id="@+id/flowHeavy" style="@style/FlowOption" android:layout_marginEnd="0dp" android:text="@string/day_flow_heavy" />
+        </LinearLayout>
+
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="@string/log_mood" />
+
+        <com.example.arc.ui.widget.FlowLayout
+            android:id="@+id/moodChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp" />
+
+        <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="@string/log_symptoms" />
+
+        <com.example.arc.ui.widget.FlowLayout
+            android:id="@+id/symptomChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            style="@style/Arc.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/log_autosave"
+            android:textAlignment="center" />
+    </LinearLayout>
+</ScrollView>

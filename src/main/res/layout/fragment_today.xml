@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="26dp">
+
+        <!-- greeting -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateLabel"
+                    style="@style/Arc.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.14"
+                    android:textSize="12sp"
+                    tools:text="SATURDAY, 5 SEPT" />
+
+                <TextView
+                    style="@style/Arc.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/today_greeting" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/arc_logo" />
+        </LinearLayout>
+
+        <!-- the ring -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <com.example.arc.ui.widget.CycleRingView
+                android:id="@+id/ring"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Arc.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.2"
+                    android:text="@string/today_cycle_day" />
+
+                <TextView
+                    android:id="@+id/cycleDay"
+                    style="@style/Arc.Display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    tools:text="13" />
+
+                <TextView
+                    android:id="@+id/phaseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/hanken_medium"
+                    android:textColor="@color/arc_accent"
+                    android:textSize="13sp"
+                    tools:text="Luteal phase" />
+
+                <TextView
+                    android:id="@+id/periodPill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_pill"
+                    android:drawablePadding="7dp"
+                    android:fontFamily="@font/hanken_regular"
+                    android:paddingStart="14dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/arc_secondary"
+                    android:textSize="12.5sp"
+                    tools:text="Period in 16 days" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- phase timeline -->
+        <LinearLayout
+            android:id="@+id/timeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:orientation="horizontal">
+
+                <View android:id="@+id/bandPeriod" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="5" android:background="@drawable/band_period" />
+                <View android:layout_width="4dp" android:layout_height="match_parent" />
+                <View android:id="@+id/bandFollicular" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="7" android:background="@drawable/band_follicular" />
+                <View android:layout_width="4dp" android:layout_height="match_parent" />
+                <View android:id="@+id/bandFertile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="5" android:background="@drawable/band_fertile" />
+                <View android:layout_width="4dp" android:layout_height="match_parent" />
+                <View android:id="@+id/bandLuteal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="11" android:background="@drawable/band_luteal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/labelPeriod" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5" android:textSize="10.5sp" android:text="@string/phase_menstrual" />
+                <TextView android:id="@+id/labelFollicular" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="7" android:textSize="10.5sp" android:text="@string/phase_follicular" />
+                <TextView android:id="@+id/labelFertile" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5" android:textSize="10.5sp" android:text="@string/phase_fertile" />
+                <TextView android:id="@+id/labelLuteal" style="@style/Arc.Caption" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="11" android:textSize="10.5sp" android:text="@string/phase_luteal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- what to expect -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/Arc.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today_expect" />
+
+            <TextView
+                android:id="@+id/expectBody"
+                style="@style/Arc.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                tools:text="Energy usually dips around day 22." />
+        </LinearLayout>
+
+        <!-- paired stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_soft"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:letterSpacing="0.14" android:textSize="10.5sp" android:text="@string/today_next_period" />
+                <TextView android:id="@+id/nextPeriodValue" style="@style/Arc.Stat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" tools:text="21 Sept" />
+                <TextView android:id="@+id/nextPeriodNote" style="@style/Arc.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="11.5sp" tools:text="±1 day" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_soft"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView style="@style/Arc.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:letterSpacing="0.14" android:textSize="10.5sp" android:text="@string/today_cycle_length" />
+                <TextView android:id="@+id/cycleLengthValue" style="@style/Arc.Stat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" tools:text="28 days" />
+                <TextView android:id="@+id/cycleLengthNote" style="@style/Arc.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="11.5sp" tools:text="Very regular" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
