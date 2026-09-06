@@ -113,6 +113,7 @@ public class CalendarFragment extends Fragment {
             lp.height = cellHeight;
             lp.columnSpec = GridLayout.spec(i % 7, 1, 1f);
             lp.rowSpec = GridLayout.spec(i / 7);
+            lp.setGravity(Gravity.FILL);
             lp.bottomMargin = (int) (4 * getResources().getDisplayMetrics().density);
             int gap = (int) (1 * getResources().getDisplayMetrics().density);
             lp.leftMargin = gap;
@@ -140,7 +141,7 @@ public class CalendarFragment extends Fragment {
         GradientDrawable shape = (GradientDrawable) cell.getBackground().mutate();
         int fill;
         if (isSelected) {
-            fill = color(R.color.arc_ink);
+            fill = color(R.color.arc_deep);
         } else if (kind == DayKind.PERIOD) {
             fill = color(R.color.arc_chip_on);
         } else if (kind == DayKind.PREDICTED_PERIOD) {
@@ -158,6 +159,9 @@ public class CalendarFragment extends Fragment {
                 color(R.color.arc_border_strong));
 
         TextView number = new TextView(requireContext());
+        number.setLayoutParams(new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        number.setGravity(Gravity.CENTER);
         number.setText(String.valueOf(date.getDayOfMonth()));
         number.setTextSize(14.5f);
         number.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.hanken_regular),
@@ -168,6 +172,7 @@ public class CalendarFragment extends Fragment {
         View dot = new View(requireContext());
         int d = (int) (4 * getResources().getDisplayMetrics().density);
         LinearLayout.LayoutParams dp = new LinearLayout.LayoutParams(d, d);
+        dp.gravity = Gravity.CENTER_HORIZONTAL;
         dp.topMargin = (int) (5 * getResources().getDisplayMetrics().density);
         dot.setLayoutParams(dp);
         if (symptoms.contains(date)) {
